@@ -9,9 +9,6 @@ export const useTodos = (initialState = []) => {
 
     const [todos, dispatch] = useReducer(todoReducer, initialState, init);
 
-    const [counter, setcounter] = useState(0);
-
-
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
     }, [todos])
